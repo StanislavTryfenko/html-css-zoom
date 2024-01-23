@@ -1,6 +1,9 @@
 :root{
 --bool-body-bg-color: black;
 --bool-tag-bg-color: rgba(128, 128, 128, 0.507);
+--bol-disconnect-color: red;
+--bol-disconnect-bg-color: Gray;
+--bool-footer-bg-color: rgb(37, 33, 33);
 }
 
 /* #region common */
@@ -37,10 +40,13 @@ span{
 .view{
     display: flex;
     justify-content: end;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 1% 0;
 }
 .speaker-view{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     background-color: gray;
     margin-right: 0.5rem;
     color: white;
@@ -49,11 +55,14 @@ span{
 }
 
 .full-screen{
+    display: flex;
+    align-items: center;
     background-color: gray;
     margin-right: 0.5rem;
     color: white;
-    padding: 0.3rem;
+    padding: 0.2rem;
     border-radius: 5px;
+    
 }
 
 .main-container{
@@ -77,24 +86,20 @@ span{
     left: 0;
     font-size: large; 
     display: flex;
-    align-items: center;
     background-color: var(--bool-tag-bg-color);
     color: white;
 
 }
 
-.name{
-    text-indent: initial;
-}
-
-
+.name{}
+    
 
 /* #endregion */
 
 /* #region footer */
 
 footer{
-    background-color: gray;
+    background-color: var(--bool-footer-bg-color);
     width: 100%;
     position: absolute;
     bottom: 0%;
@@ -103,5 +108,31 @@ footer{
     align-items: center;
     height: 5rem;
 }
+
+.footer-img{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    color: white;
+}
+
+.footer-container{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 1REM;
+}
+
+.footer-disconnect{
+    color: var(--bol-disconnect-color);
+    background-color: var(--bol-disconnect-bg-color);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 
 /* #endregion */
